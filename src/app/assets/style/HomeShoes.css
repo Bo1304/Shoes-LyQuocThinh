@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+  }
+  @import url("https://fonts.google.com/specimen/Rubik?query=Rubik");
+  body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  p {
+    font-family: 'Rubik', sans-serif;
+  }
+  .page {
+    height: 100vh;
+    
+  }
+  .page::before {
+    content: "";
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    background-color: #f6c90e;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) skew(0, -10deg);
+    border-radius: 50%;
+    z-index: -1;
+    animation: waving 5s ease-in-out infinite alternate;
+  }
+  .card {
+    width: 380px;
+    padding: 20px;
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd inset;
+    padding-top: 110px;
+    overflow: hidden;
+  }
+  .card img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .card h2 {
+    margin: 0;
+  }
+  .card p {
+    margin: 0;
+ 
+
+  }
+  .card .TitleProductt{
+    font-size: 24px;
+    font-weight:700;
+    margin-right: 175px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    position:absolute;
+    top: 45px;
+    left:40px;
+    z-index:1;
+  }
+  @keyframes waving {
+    from {
+      transform: translateX(-50%) skew(0, -10deg);
+    }
+    to {
+      transform: translateX(-30%) skew(10deg, 0);
+    }
+  }
+
+  .product-catagory{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 26px 0 20px;
+    line-height: 1.5;
+    color: black;
+  }
+  .product-details p{
+    font-size: 13px;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .product-links button{
+    cursor: pointer;
+    background-color: #f6c90e;
+    font-weight: 700;
+    font-size: 14px;
+    height: 46px;
+    min-width: 46px;
+    border-radius:20px;
+    padding: 15px 25px;
+    text-transform: uppercase;
+  }
+  .product-price {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+
+  .card h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 16px 0;
+    margin-right: 80px;
+  }
+
+  .product-tumb img{
+    transform: rotate(-24deg);
+    filter: drop-shadow(0 30px 20px rgba(0,0,0,.2));
+    margin-left: -16px;
+  }
+  .card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: auto; 
+  max-height: 550px;
+  -ms-overflow-style: none; /* ẩn thanh cuộn trên Internet Explorer */
+  scrollbar-width: none; /* ẩn thanh cuộn trên Firefox */
+}
+ .product-card{
+  margin-bottom: 60px;
+ }
+.contentProduct h2{
+  height: 0px;
+    position: fixed;
+    z-index: 999;
+    margin-right: 175px !important;
+    /* padding-bottom: 25px; */
+}
+.card-container::-webkit-scrollbar {
+  display: none; /* ẩn thanh cuộn trên Chrome, Safari và Opera */
+}
+
+.product-links .no-add{
+  cursor: not-allowed;
+  background-color: rgb(215, 46, 46);
+}
+.overlay{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: #f6c90e;
+  top: -20%;
+  left: -50%;
+  z-index: 0;
+  
+}
+
+
+@media screen and (max-width:1280px) {
+  .container .pageProduct {
+    gap: 200px;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .card{
+    left:300px;
+    height: 565px;
+  }
+}
+@media screen and (max-width:920px) {
+  .card{
+    left:225px;
+  }
+}
+@media screen and (max-width:820px) {
+  .card{
+    left:200px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .pageProduct{
+    flex-direction: column;
+    height: auto;
+
+  }
+  
+  .containerCard{
+    display: flex;
+    flex-direction: column !important;
+    height: auto !important;
+  }
+ 
+}
